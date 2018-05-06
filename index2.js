@@ -13,11 +13,9 @@ const courseSchema = new mongoose.Schema({
 
 const Course = mongoose.model('Course', courseSchema);
 
-//console.log(Course);
-
 async function getCourses() {
     const pageNumber = 1;
-    const pageSize = 2;
+    const pageSize = 20;
 
     const courses = await Course
     .find({author:'Mosh'})
@@ -27,10 +25,15 @@ async function getCourses() {
     return courses;
 }
 
+async function updateCourse() {
 
-async function run() {
-    const courses = await getCourses();
-    console.log(courses);
 }
 
-run();
+// async function run() {
+//     const courses = await getCourses();
+//     console.log(courses);
+// }
+
+// run();
+
+updateCourse();
